@@ -215,20 +215,19 @@
         }
 
         private void btnMaxMin_Click(object sender, EventArgs e) {
-            int[] sortedArray = arrayNumeros;
+            int min, min = arrayNumeros[0];
 
-            Array.Sort(sortedArray);
-            /*
-                Ao contrário dos anteriores de máximo e minímo optei por dar sort ao array e a partir daí encontrar o 
-                valor máximo e minímo em tempo constante.
-                Nos anteriores percorreriamos o array apenas uma vez, desta vez seriam duas resultado em
-                n ^ 2 iterações, a implementação do método Sort no C# usa o algorítmo de QuickSort 
-                O que resulta, no pior dos casos nas mesmas n ^ 2 iterações, mas no melhor dos casos n log(n) iterações
-                logo, acaba por ser mais vantajoso usar este método em vez de um brute force puro.
-            */
-
-            int max = sortedArray[sortedArray.Length - 1];
-            int min = sortedArray[0];
+            for (int i = 1; i < arrayNumeros.Length; i++) {
+                if (arrayNumeros[i] < min) {
+                    min = arrayNumeros[i];
+                }
+            }
+            
+            for (int i = 1; i < arrayNumeros.Length; i++) {
+                if (arrayNumeros[i] > max) {
+                    max = arrayNumeros[i];
+                }
+            }
 
             lblResultadoMaxMin.Text = $"O valor máximo é: {max} e o minímo é: {min}";
         }
