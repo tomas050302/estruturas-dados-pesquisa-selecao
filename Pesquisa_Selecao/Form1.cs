@@ -171,6 +171,10 @@
                 better time complexity.
             */
 
+            DateTime TempoI, TempoF;
+            TimeSpan Tempo;
+            TempoI = DateTime.Now;
+
             int[] sortedArray = new int[arrayNumeros.Length];
             Array.Copy(arrayNumeros, sortedArray, arrayNumeros.Length);
 
@@ -184,10 +188,19 @@
                 int result = sortedArray[k - 1];
 
                 lblResultadoKMin.Text = $"O K-Ésimo Menor Número é o: {result}";
+
+                TempoF = DateTime.Now;
+                Tempo = TempoF.Subtract(TempoI);
+
+                lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
             }
         }
 
         private void btnContar_Click(object sender, EventArgs e) {
+            DateTime TempoI, TempoF;
+            TimeSpan Tempo;
+            TempoI = DateTime.Now;
+
             int n = int.Parse(txtValorContar.Text);
             int count = 0;
 
@@ -197,10 +210,19 @@
                 }
             }
 
+            TempoF = DateTime.Now;
+            Tempo = TempoF.Subtract(TempoI);
+
+            lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
+
             lblResultadoContar.Text = $"O valor aparece {count} vezes.";
         }
 
         private void btnMax_Click(object sender, EventArgs e) {
+            DateTime TempoI, TempoF;
+            TimeSpan Tempo;
+            TempoI = DateTime.Now;
+
             int max = arrayNumeros[0];
 
             for (int i = 1; i < arrayNumeros.Length; i++) {
@@ -209,10 +231,20 @@
                 }
             }
 
+            TempoF = DateTime.Now;
+            Tempo = TempoF.Subtract(TempoI);
+
+            lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
+
             lblResultadoMax.Text = $"O Maior número é: {max}";
         }
 
         private void btnMin_Click(object sender, EventArgs e) {
+            DateTime TempoI, TempoF;
+            TimeSpan Tempo;
+
+            TempoI = DateTime.Now;
+
             int min = arrayNumeros[0];
 
             for (int i = 1; i < arrayNumeros.Length; i++) {
@@ -221,10 +253,20 @@
                 }
             }
 
+            TempoF = DateTime.Now;
+            Tempo = TempoF.Subtract(TempoI);
+
+            lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
+
             lblResultadoMax.Text = $"O Maior número é: {min}";
         }
 
         private void btnKEsimoMax_Click(object sender, EventArgs e) {
+            DateTime TempoI, TempoF;
+            TimeSpan Tempo;
+
+            TempoI = DateTime.Now;
+
             int[] sortedArray = new int[arrayNumeros.Length];
             Array.Copy(arrayNumeros, sortedArray, arrayNumeros.Length);
 
@@ -237,11 +279,21 @@
             } else {
                 int result = sortedArray[sortedArray.Length - k];
 
+                TempoF = DateTime.Now;
+                Tempo = TempoF.Subtract(TempoI);
+
+                lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
+
                 lblResultadoKMax.Text = $"O K-Ésimo Maior Número é o: {result}";
             }
         }
 
         private void btnMaxMin_Click(object sender, EventArgs e) {
+            DateTime TempoI, TempoF;
+            TimeSpan Tempo;
+
+            TempoI = DateTime.Now;
+
             int max = arrayNumeros[0];
             int min = arrayNumeros[0];
 
@@ -256,6 +308,11 @@
                     max = arrayNumeros[i];
                 }
             }
+
+            TempoF = DateTime.Now;
+            Tempo = TempoF.Subtract(TempoI);
+
+            lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
 
             lblResultadoMaxMin.Text = $"O valor máximo é: {max} e o minímo é: {min}";
         }
