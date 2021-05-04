@@ -201,21 +201,25 @@
             TimeSpan Tempo;
             TempoI = DateTime.Now;
 
-            int n = int.Parse(txtValorContar.Text);
-            int count = 0;
+            if (txtValorContar.Text == "")
+                MessageBox.Show("Deve inserir um valor válido!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else {
+                int n = int.Parse(txtValorContar.Text);
+                int count = 0;
 
-            for (int i = 0; i < arrayNumeros.Length; i++) {
-                if (arrayNumeros[i] == n) {
-                    count++;
+                for (int i = 0; i < arrayNumeros.Length; i++) {
+                    if (arrayNumeros[i] == n) {
+                        count++;
+                    }
                 }
+
+                TempoF = DateTime.Now;
+                Tempo = TempoF.Subtract(TempoI);
+
+                lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
+
+                lblResultadoContar.Text = $"O valor aparece {count} vezes.";
             }
-
-            TempoF = DateTime.Now;
-            Tempo = TempoF.Subtract(TempoI);
-
-            lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
-
-            lblResultadoContar.Text = $"O valor aparece {count} vezes.";
         }
 
         private void btnMax_Click(object sender, EventArgs e) {
@@ -258,7 +262,7 @@
 
             lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
 
-            lblResultadoMax.Text = $"O Maior número é: {min}";
+            lblResultadoMin.Text = $"O Menor número é: {min}";
         }
 
         private void btnKEsimoMax_Click(object sender, EventArgs e) {

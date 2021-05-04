@@ -279,25 +279,29 @@ namespace Pesquisa_Selecao {
             // lblResultadoContar
             // 
             this.lblResultadoContar.AutoSize = true;
-            this.lblResultadoContar.Location = new System.Drawing.Point(237, 150);
+            this.lblResultadoContar.Location = new System.Drawing.Point(180, 150);
             this.lblResultadoContar.Name = "lblResultadoContar";
             this.lblResultadoContar.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoContar.TabIndex = 6;
             this.lblResultadoContar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             // 
             // lblResultadoMaxMin
             // 
             this.lblResultadoMaxMin.AutoSize = true;
-            this.lblResultadoMaxMin.Location = new System.Drawing.Point(237, 125);
+            this.lblResultadoMaxMin.Location = new System.Drawing.Point(160, 125);
             this.lblResultadoMaxMin.Name = "lblResultadoMaxMin";
             this.lblResultadoMaxMin.Size = new System.Drawing.Size(28, 25);
+            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoMaxMin.TabIndex = 5;
             this.lblResultadoMaxMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoKMin
             // 
+            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoKMin.AutoSize = true;
-            this.lblResultadoKMin.Location = new System.Drawing.Point(237, 92);
+            this.lblResultadoKMin.Location = new System.Drawing.Point(180, 92);
+            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoKMin.Name = "lblResultadoKMin";
             this.lblResultadoKMin.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoKMin.TabIndex = 4;
@@ -306,27 +310,30 @@ namespace Pesquisa_Selecao {
             // lblResultadoKMax
             // 
             this.lblResultadoKMax.AutoSize = true;
-            this.lblResultadoKMax.Location = new System.Drawing.Point(237, 42);
+            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblResultadoKMax.Location = new System.Drawing.Point(180, 42);
             this.lblResultadoKMax.Name = "lblResultadoKMax";
-            this.lblResultadoKMax.Size = new System.Drawing.Size(28, 25);
+            this.lblResultadoKMax.Size = new System.Drawing.Size(0, 25);
             this.lblResultadoKMax.TabIndex = 3;
             this.lblResultadoKMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoMin
             // 
             this.lblResultadoMin.AutoSize = true;
-            this.lblResultadoMin.Location = new System.Drawing.Point(237, 67);
+            this.lblResultadoMin.Location = new System.Drawing.Point(180, 67);
+            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoMin.Name = "lblResultadoMin";
-            this.lblResultadoMin.Size = new System.Drawing.Size(28, 25);
+            this.lblResultadoMin.Size = new System.Drawing.Size(0, 25);
             this.lblResultadoMin.TabIndex = 2;
             this.lblResultadoMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoMax
             // 
             this.lblResultadoMax.AutoSize = true;
-            this.lblResultadoMax.Location = new System.Drawing.Point(237, 17);
+            this.lblResultadoMax.Location = new System.Drawing.Point(180, 17);
+            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoMax.Name = "lblResultadoMax";
-            this.lblResultadoMax.Size = new System.Drawing.Size(28, 25);
+            this.lblResultadoMax.Size = new System.Drawing.Size(0, 25);
             this.lblResultadoMax.TabIndex = 1;
             this.lblResultadoMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
