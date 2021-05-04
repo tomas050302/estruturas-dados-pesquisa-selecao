@@ -148,9 +148,7 @@
             int[] sortedArray = arrayNumeros;
             Array.Sort(sortedArray);
 
-
             int k = int.Parse(numericKNum.Value.ToString());
-
 
             if (k < 1 || k > sortedArray.Length) {
                 MessageBox.Show("O número deve ser um índice válido do array!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -215,14 +213,15 @@
         }
 
         private void btnMaxMin_Click(object sender, EventArgs e) {
-            int min, min = arrayNumeros[0];
+            int max = arrayNumeros[0];
+            int min = arrayNumeros[0];
 
             for (int i = 1; i < arrayNumeros.Length; i++) {
                 if (arrayNumeros[i] < min) {
                     min = arrayNumeros[i];
                 }
             }
-            
+
             for (int i = 1; i < arrayNumeros.Length; i++) {
                 if (arrayNumeros[i] > max) {
                     max = arrayNumeros[i];
