@@ -70,6 +70,7 @@
             btnKEsimoMin.Enabled = true;
             btnMaxMin.Enabled = true;
             btnContar.Enabled = true;
+            numericKNum.Enabled = true;
         }
 
         /// <summary>
@@ -93,6 +94,9 @@
             int valor;
 
             bool sucesso = int.TryParse(txtValorProcurar.Text, out valor);
+
+            if (valor <= 0)
+                MessageBox.Show("O número deve ser válido!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             if (sucesso) {
 
@@ -125,11 +129,29 @@
 
             bool sucesso = int.TryParse(txtValorProcurar.Text, out valor);
 
-            int[] sortedArray = arrayNumeros;
+            if (valor <= 0)
+                MessageBox.Show("O número deve ser válido!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            int[] sortedArray = new int[arrayNumeros.Length];
+            Array.Copy(arrayNumeros, sortedArray, arrayNumeros.Length);
+
             Array.Sort(sortedArray); // The binary search needs the arary to be sorted to work
 
             if (sucesso) {
-                int pos = ClassPesquisaSelecao.PesquisaBinaria(sortedArray, valor);
+                ClassPesquisaSelecao.PesquisaBinaria(sortedArray, valor);
+
+                TempoF = DateTime.Now;
+                Tempo = TempoF.Subtract(TempoI);
+
+                lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
+
+                /*
+                    First get the time for sorting and searching with binary searching to get the accurate time
+                    Then use the built in function to get the indexOf the pos in the original array to get the
+                    correct answer.
+                */
+
+                int pos = Array.IndexOf(arrayNumeros, valor);
 
                 if (pos == -1) {
                     txtResultado.Text = $"O Número {valor} não existe no array";
@@ -138,14 +160,20 @@
                 }
             }
 
-            TempoF = DateTime.Now;
-            Tempo = TempoF.Subtract(TempoI);
 
-            lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
         }
 
         private void btnKEsimoMin_Click(object sender, EventArgs e) {
-            int[] sortedArray = arrayNumeros;
+            /*
+                If we get k = arrayNumeros.Length we would do n ^ k iterations in the code to get the max value in array.
+                So, we use sort the array first. In C# the sorting algorithm used is QuickSorting, that gets in the worst
+                case scenario n ^ 2 iterations, and the in minimum n log(n), so, for all k > 2 this algorithm will garantee
+                better time complexity.
+            */
+
+            int[] sortedArray = new int[arrayNumeros.Length];
+            Array.Copy(arrayNumeros, sortedArray, arrayNumeros.Length);
+
             Array.Sort(sortedArray);
 
             int k = int.Parse(numericKNum.Value.ToString());
@@ -197,9 +225,10 @@
         }
 
         private void btnKEsimoMax_Click(object sender, EventArgs e) {
-            int[] sortedArray = arrayNumeros;
-            Array.Sort(sortedArray);
+            int[] sortedArray = new int[arrayNumeros.Length];
+            Array.Copy(arrayNumeros, sortedArray, arrayNumeros.Length);
 
+            Array.Sort(sortedArray);
 
             int k = int.Parse(numericKNum.Value.ToString());
 
