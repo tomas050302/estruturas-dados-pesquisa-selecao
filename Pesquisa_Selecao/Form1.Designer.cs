@@ -279,7 +279,7 @@ namespace Pesquisa_Selecao {
             // lblResultadoContar
             // 
             this.lblResultadoContar.AutoSize = true;
-            this.lblResultadoContar.Location = new System.Drawing.Point(180, 150);
+            this.lblResultadoContar.Location = new System.Drawing.Point(140, 150);
             this.lblResultadoContar.Name = "lblResultadoContar";
             this.lblResultadoContar.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoContar.TabIndex = 6;
@@ -289,7 +289,7 @@ namespace Pesquisa_Selecao {
             // lblResultadoMaxMin
             // 
             this.lblResultadoMaxMin.AutoSize = true;
-            this.lblResultadoMaxMin.Location = new System.Drawing.Point(160, 125);
+            this.lblResultadoMaxMin.Location = new System.Drawing.Point(120, 125);
             this.lblResultadoMaxMin.Name = "lblResultadoMaxMin";
             this.lblResultadoMaxMin.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -300,7 +300,7 @@ namespace Pesquisa_Selecao {
             // 
             this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoKMin.AutoSize = true;
-            this.lblResultadoKMin.Location = new System.Drawing.Point(180, 92);
+            this.lblResultadoKMin.Location = new System.Drawing.Point(140, 92);
             this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoKMin.Name = "lblResultadoKMin";
             this.lblResultadoKMin.Size = new System.Drawing.Size(28, 25);
@@ -311,7 +311,7 @@ namespace Pesquisa_Selecao {
             // 
             this.lblResultadoKMax.AutoSize = true;
             this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblResultadoKMax.Location = new System.Drawing.Point(180, 42);
+            this.lblResultadoKMax.Location = new System.Drawing.Point(140, 42);
             this.lblResultadoKMax.Name = "lblResultadoKMax";
             this.lblResultadoKMax.Size = new System.Drawing.Size(0, 25);
             this.lblResultadoKMax.TabIndex = 3;
@@ -320,7 +320,7 @@ namespace Pesquisa_Selecao {
             // lblResultadoMin
             // 
             this.lblResultadoMin.AutoSize = true;
-            this.lblResultadoMin.Location = new System.Drawing.Point(180, 67);
+            this.lblResultadoMin.Location = new System.Drawing.Point(140, 67);
             this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoMin.Name = "lblResultadoMin";
             this.lblResultadoMin.Size = new System.Drawing.Size(0, 25);
@@ -330,7 +330,7 @@ namespace Pesquisa_Selecao {
             // lblResultadoMax
             // 
             this.lblResultadoMax.AutoSize = true;
-            this.lblResultadoMax.Location = new System.Drawing.Point(180, 17);
+            this.lblResultadoMax.Location = new System.Drawing.Point(140, 17);
             this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoMax.Name = "lblResultadoMax";
             this.lblResultadoMax.Size = new System.Drawing.Size(0, 25);
