@@ -279,58 +279,63 @@ namespace Pesquisa_Selecao {
             // lblResultadoContar
             // 
             this.lblResultadoContar.AutoSize = true;
-            this.lblResultadoContar.Location = new System.Drawing.Point(231, 139);
+            this.lblResultadoContar.Location = new System.Drawing.Point(237, 150);
             this.lblResultadoContar.Name = "lblResultadoContar";
-            this.lblResultadoContar.Size = new System.Drawing.Size(0, 25);
+            this.lblResultadoContar.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoContar.TabIndex = 6;
+            this.lblResultadoContar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoMaxMin
             // 
             this.lblResultadoMaxMin.AutoSize = true;
-            this.lblResultadoMaxMin.Location = new System.Drawing.Point(231, 114);
+            this.lblResultadoMaxMin.Location = new System.Drawing.Point(237, 125);
             this.lblResultadoMaxMin.Name = "lblResultadoMaxMin";
-            this.lblResultadoMaxMin.Size = new System.Drawing.Size(0, 25);
+            this.lblResultadoMaxMin.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoMaxMin.TabIndex = 5;
+            this.lblResultadoMaxMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoKMin
             // 
             this.lblResultadoKMin.AutoSize = true;
-            this.lblResultadoKMin.Location = new System.Drawing.Point(231, 89);
+            this.lblResultadoKMin.Location = new System.Drawing.Point(237, 92);
             this.lblResultadoKMin.Name = "lblResultadoKMin";
-            this.lblResultadoKMin.Size = new System.Drawing.Size(0, 25);
+            this.lblResultadoKMin.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoKMin.TabIndex = 4;
+            this.lblResultadoKMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoKMax
             // 
             this.lblResultadoKMax.AutoSize = true;
-            this.lblResultadoKMax.Location = new System.Drawing.Point(231, 64);
+            this.lblResultadoKMax.Location = new System.Drawing.Point(237, 42);
             this.lblResultadoKMax.Name = "lblResultadoKMax";
-            this.lblResultadoKMax.Size = new System.Drawing.Size(0, 25);
+            this.lblResultadoKMax.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoKMax.TabIndex = 3;
+            this.lblResultadoKMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoMin
             // 
             this.lblResultadoMin.AutoSize = true;
-            this.lblResultadoMin.Location = new System.Drawing.Point(231, 39);
+            this.lblResultadoMin.Location = new System.Drawing.Point(237, 67);
             this.lblResultadoMin.Name = "lblResultadoMin";
-            this.lblResultadoMin.Size = new System.Drawing.Size(0, 25);
+            this.lblResultadoMin.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoMin.TabIndex = 2;
+            this.lblResultadoMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoMax
             // 
             this.lblResultadoMax.AutoSize = true;
-            this.lblResultadoMax.Location = new System.Drawing.Point(231, 14);
+            this.lblResultadoMax.Location = new System.Drawing.Point(237, 17);
             this.lblResultadoMax.Name = "lblResultadoMax";
-            this.lblResultadoMax.Size = new System.Drawing.Size(0, 25);
+            this.lblResultadoMax.Size = new System.Drawing.Size(28, 25);
             this.lblResultadoMax.TabIndex = 1;
+            this.lblResultadoMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoFinal
             // 
-            this.lblResultadoFinal.AutoSize = true;
-            this.lblResultadoFinal.Location = new System.Drawing.Point(234, 14);
+            this.lblResultadoFinal.Location = new System.Drawing.Point(0, 0);
             this.lblResultadoFinal.Name = "lblResultadoFinal";
-            this.lblResultadoFinal.Size = new System.Drawing.Size(0, 25);
-            this.lblResultadoFinal.TabIndex = 0;
+            this.lblResultadoFinal.Size = new System.Drawing.Size(100, 23);
+            this.lblResultadoFinal.TabIndex = 7;
             // 
             // lblResultadoPesquisa
             // 
