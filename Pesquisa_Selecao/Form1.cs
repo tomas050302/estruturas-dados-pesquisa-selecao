@@ -58,7 +58,14 @@
 
             lblTempoCriar.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
 
+            TempoI = DateTime.Now;
+
             lstBoxNumeros.DataSource = arrayNumeros;
+
+            TempoF = DateTime.Now;
+            Tempo = TempoF.Subtract(TempoI);
+
+            lblTempoMostrarArray.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
 
             btnPesquisaBinaria.Enabled = true;
             btnPesquisaSequencial.Enabled = true;
@@ -159,8 +166,6 @@
                     txtResultado.Text = $"O Número {valor} está na posição {pos}";
                 }
             }
-
-
         }
 
         private void btnKEsimoMin_Click(object sender, EventArgs e) {
@@ -319,6 +324,49 @@
             lblTempoPesquisas.Text = Tempo.TotalSeconds.ToString("0.0000") + " segundos";
 
             lblResultadoMaxMin.Text = $"O valor máximo é: {max} e o minímo é: {min}";
+        }
+
+        private void btnSair_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e) {
+            btnPesquisaBinaria.Enabled = false;
+            btnPesquisaSequencial.Enabled = false;
+            txtValorProcurar.Enabled = false;
+            txtValorContar.Enabled = false;
+            btnMax.Enabled = false;
+            btnMin.Enabled = false;
+            btnKEsimoMax.Enabled = false;
+            btnKEsimoMin.Enabled = false;
+            btnMaxMin.Enabled = false;
+            btnContar.Enabled = false;
+            numericKNum.Enabled = false;
+
+            txtValorContar.Text = "";
+            txtValorProcurar.Text = "";
+            txtResultado.Text = "";
+
+            lblResultado.Text = "";
+            lblResultadoContar.Text = "";
+            lblResultadoFinal.Text = "";
+            lblResultadoKMax.Text = "";
+            lblResultadoKMin.Text = "";
+            lblResultadoMax.Text = "";
+            lblResultadoMaxMin.Text = "";
+            lblResultadoMin.Text = "";
+            lblResultadoPesquisa.Text = "";
+            lblTempoCriar.Text = "";
+            lblTempoPassadoArray.Text = "";
+            lblTempoPesquisas.Text = "";
+            lblTempoMostrarArray.Text = "";
+            numericKNum.Value = 1;
+            numericNumeros.Value = 1000;
+            radioButtonAleatorio.Checked = true;
+
+            arrayNumeros = Array.Empty<int>();
+
+            lstBoxNumeros.DataSource = arrayNumeros;
         }
     }
 }

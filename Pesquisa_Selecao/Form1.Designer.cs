@@ -63,6 +63,9 @@ namespace Pesquisa_Selecao {
             this.btnPesquisaSequencial = new System.Windows.Forms.Button();
             this.txtValorProcurar = new System.Windows.Forms.TextBox();
             this.lblValorProcura = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.lblTempoMostrarArray = new System.Windows.Forms.Label();
             this.gpboxParam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericNumeros)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -195,6 +198,7 @@ namespace Pesquisa_Selecao {
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblTempoMostrarArray);
             this.groupBox2.Controls.Add(this.lblTempoPassadoArray);
             this.groupBox2.Controls.Add(this.lstBoxNumeros);
             this.groupBox2.Location = new System.Drawing.Point(19, 403);
@@ -281,18 +285,16 @@ namespace Pesquisa_Selecao {
             this.lblResultadoContar.AutoSize = true;
             this.lblResultadoContar.Location = new System.Drawing.Point(140, 150);
             this.lblResultadoContar.Name = "lblResultadoContar";
-            this.lblResultadoContar.Size = new System.Drawing.Size(28, 25);
+            this.lblResultadoContar.Size = new System.Drawing.Size(0, 25);
             this.lblResultadoContar.TabIndex = 6;
             this.lblResultadoContar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             // 
             // lblResultadoMaxMin
             // 
             this.lblResultadoMaxMin.AutoSize = true;
             this.lblResultadoMaxMin.Location = new System.Drawing.Point(120, 125);
             this.lblResultadoMaxMin.Name = "lblResultadoMaxMin";
-            this.lblResultadoMaxMin.Size = new System.Drawing.Size(28, 25);
-            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblResultadoMaxMin.Size = new System.Drawing.Size(0, 25);
             this.lblResultadoMaxMin.TabIndex = 5;
             this.lblResultadoMaxMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -301,16 +303,14 @@ namespace Pesquisa_Selecao {
             this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoKMin.AutoSize = true;
             this.lblResultadoKMin.Location = new System.Drawing.Point(140, 92);
-            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoKMin.Name = "lblResultadoKMin";
-            this.lblResultadoKMin.Size = new System.Drawing.Size(28, 25);
+            this.lblResultadoKMin.Size = new System.Drawing.Size(0, 25);
             this.lblResultadoKMin.TabIndex = 4;
             this.lblResultadoKMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResultadoKMax
             // 
             this.lblResultadoKMax.AutoSize = true;
-            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoKMax.Location = new System.Drawing.Point(140, 42);
             this.lblResultadoKMax.Name = "lblResultadoKMax";
             this.lblResultadoKMax.Size = new System.Drawing.Size(0, 25);
@@ -321,7 +321,6 @@ namespace Pesquisa_Selecao {
             // 
             this.lblResultadoMin.AutoSize = true;
             this.lblResultadoMin.Location = new System.Drawing.Point(140, 67);
-            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoMin.Name = "lblResultadoMin";
             this.lblResultadoMin.Size = new System.Drawing.Size(0, 25);
             this.lblResultadoMin.TabIndex = 2;
@@ -331,7 +330,6 @@ namespace Pesquisa_Selecao {
             // 
             this.lblResultadoMax.AutoSize = true;
             this.lblResultadoMax.Location = new System.Drawing.Point(140, 17);
-            this.lblResultadoKMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoMax.Name = "lblResultadoMax";
             this.lblResultadoMax.Size = new System.Drawing.Size(0, 25);
             this.lblResultadoMax.TabIndex = 1;
@@ -543,15 +541,48 @@ namespace Pesquisa_Selecao {
             this.lblValorProcura.TabIndex = 0;
             this.lblValorProcura.Text = "Valor a procurar:";
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(861, 819);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(139, 47);
+            this.btnLimpar.TabIndex = 3;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(1016, 819);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(139, 47);
+            this.btnSair.TabIndex = 4;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // lblTempoMostrarArray
+            // 
+            this.lblTempoMostrarArray.AutoSize = true;
+            this.lblTempoMostrarArray.Location = new System.Drawing.Point(174, 372);
+            this.lblTempoMostrarArray.Name = "lblTempoMostrarArray";
+            this.lblTempoMostrarArray.Size = new System.Drawing.Size(0, 25);
+            this.lblTempoMostrarArray.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 840);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1213, 878);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.gpxBoxOperacoes);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gpboxParam);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(617, 448);
             this.Name = "Form1";
             this.Text = "Pesquisa e Seleção";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -610,5 +641,8 @@ namespace Pesquisa_Selecao {
         private System.Windows.Forms.Label lblResultadoKMin;
         private System.Windows.Forms.Label lblResultadoKMax;
         private System.Windows.Forms.Label lblResultadoMin;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblTempoMostrarArray;
     }
 }
